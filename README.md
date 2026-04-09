@@ -1,6 +1,6 @@
 # 🍰 My Cooking Page
 
-My website is live at: https://your-username.github.io/cooking-page/
+My website is live at: https://beni29200.github.io/simple-recipes/
 
 A cute recipe website I made with HTML and CSS. It shows three recipes:
 - Fluffy Pancakes

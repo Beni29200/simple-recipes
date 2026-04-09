@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Cooking Page 🍰</title>
+    <style>
+        body {
+            background-color: #fff4e6;
+            font-family: Arial, sans-serif;
+            color: #6b4f4f;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #ff8fa3;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #ff8fa3;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .recipe {
+            background-color: #ffd6e0;
+            width: 280px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .recipes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        ul, ol {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .recipe:hover {
+            transform: scale(1.03);
+            transition: 0.3s;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ff8fa3;
+            width: 50%;
+            margin: 20px auto;
+        }
+        button {
+            background-color: #ff8fa3;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e76f85;
+        }
+        .navbar {
+            background-color: #ffd6e0;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .navbar a {
+            color: #6b4f4f;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #ff8fa3;
+        }
+        .review-box {
+            text-align: center;
+            background-color: #ffd6e0;
+            padding: 20px;
+            border-radius: 20px;
+            width: 80%;
+            margin: 20px auto;
+        }
+        input, textarea {
+            border-radius: 8px;
+            border: 1px solid #ff8fa3;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Recipes</a>
+    <a href="#">Contact</a>
+    <a href="#">Reviews</a>
+</div>
+
+<h1>Welcome to my kitchen 🍓</h1>
+<p>Hi! I share simple and cute recipes 💕</p>
+
+<hr>
+
+<div class="recipes-container">
+    <div class="recipe">
+        <h2>🥞 Fluffy Pancakes</h2>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 cup flour</li>
+            <li>1 egg</li>
+            <li>1 cup milk</li>
+        </ul>
+        <h3>Steps:</h3>
+        <ol>
+            <li>Mix everything</li>
+            <li>Pour into a pan</li>
+            <li>Cook until golden</li>
+        </ol>
+    </div>
+
+    <div class="recipe">
+        <h2>🍫 Chocolate Mug Cake</h2>
+        <p>A super quick and delicious dessert!</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>4 tbsp flour</li>
+            <li>2 tbsp sugar</li>
+            <li>2 tbsp cocoa powder</li>
+            <li>3 tbsp milk</li>
+            <li>2 tbsp oil</li>
+        </ul>
+        <h3>Steps:</h3>
+        <ol>
+            <li>Mix everything in a mug</li>
+            <li>Microwave for 1 minute</li>
+            <li>Let it cool</li>
+        </ol>
+    </div>
+
+    <div class="recipe">
+        <h2>🍓 Strawberry Smoothie</h2>
+        <p>Fresh and healthy drink!</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>Strawberries</li>
+            <li>Banana</li>
+            <li>Milk</li>
+            <li>Honey</li>
+        </ul>
+        <h3>Steps:</h3>
+        <ol>
+            <li>Blend everything</li>
+            <li>Serve cold</li>
+        </ol>
+    </div>
+</div>
+
+<hr>
+
+<div class="review-box">
+    <h2>💬 Leave a review</h2>
+    <p>How did you find the page? Is it fun? Cool? Do you like the recipes?</p>
+    <form>
+        <label for="name">Your name:</label><br>
+        <input type="text" id="name" name="name" placeholder="e.g., Ana" style="padding: 5px; margin: 5px;"><br><br>
+        <label for="review">Your review:</label><br>
+        <textarea id="review" rows="4" cols="40" placeholder="I loved the pancakes! 🥞"></textarea><br><br>
+        <button type="submit">Send review</button>
+    </form>
+    <p>📧 Or email me directly: <a href="mailto:benicheesebun@gmail.com">benicheesebun@gmail.com</a></p>
+</div>
+
+</body>
+</html>

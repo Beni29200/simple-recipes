@@ -1,0 +1,325 @@
+body {
+    background: linear-gradient(135deg, #fff4e6 0%, #ffe8f0 100%);
+    font-family: 'Segoe UI', 'Quicksand', Arial, sans-serif;
+    color: #6b4f4f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Smooth fade-in animation for the whole page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ff8fa3;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    animation: bounce 1s ease;
+    background: linear-gradient(45deg, #ff8fa3, #ffb3c6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Bounce animation for the title */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h2 {
+    color: #ff8fa3;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff8fa3, #ffb3c6);
+    transition: width 0.3s ease;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.recipe {
+    background: linear-gradient(135deg, #ffd6e0, #ffe4eb);
+    width: 280px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.recipe:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 143, 163, 0.3);
+}
+
+.recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul, ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 8px 0;
+    transition: transform 0.2s ease;
+}
+
+ul li:hover, ol li:hover {
+    transform: translateX(5px);
+    color: #ff8fa3;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff8fa3, #ffb3c6, transparent);
+    width: 70%;
+    margin: 30px auto;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+button {
+    background: linear-gradient(135deg, #ff8fa3, #ff6b85);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 133, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.navbar {
+    background: rgba(255, 214, 224, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar a {
+    color: #6b4f4f;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff8fa3;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #ff8fa3;
+    transform: translateY(-2px);
+}
+
+.review-box {
+    text-align: center;
+    background: linear-gradient(135deg, #ffd6e0, #ffe4eb);
+    padding: 30px;
+    border-radius: 35px;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-box:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(255, 143, 163, 0.2);
+}
+
+input, textarea {
+    border-radius: 12px;
+    border: 2px solid #ff8fa3;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 10px;
+    transition: all 0.3s ease;
+    width: 80%;
+    max-width: 300px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff6b85;
+    box-shadow: 0 0 10px rgba(255, 107, 133, 0.3);
+    transform: scale(1.02);
+}
+
+/* Floating hearts animation */
+body::before {
+    content: '❤️';
+    position: fixed;
+    bottom: -50px;
+    left: 10%;
+    font-size: 20px;
+    animation: floatHeart 8s infinite;
+    pointer-events: none;
+    z-index: 999;
+}
+
+body::after {
+    content: '🍓';
+    position: fixed;
+    bottom: -50px;
+    right: 10%;
+    font-size: 20px;
+    animation: floatHeart 10s infinite 2s;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .recipes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .navbar a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
